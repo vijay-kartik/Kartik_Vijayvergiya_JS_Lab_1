@@ -1,5 +1,3 @@
-// import quesListJSON from "./questionsList.js";
-const quesListJSON = require("./questionsList.js");
 var grid = document.querySelector(".grid");
 var ques = document.querySelector("#question");
 var choiceButtons = [document.querySelector("#btn0"), 
@@ -10,34 +8,34 @@ var choiceButtons = [document.querySelector("#btn0"),
 
 var progress = document.querySelector("#progress");
 
-// const quesListJSON = 
-// [
-//     {
-//         ques: "JavaScript supports", 
-//         options: ["Functions", "XHTML", "CSS", "HTML"],
-//         ans: "Functions"
-//     },
-//     {
-//         ques: "Which language is used for styling web pages?", 
-//         options: ["HTML", "JQuery", "CSS", "XML"],
-//         ans: "CSS"
-//     },
-//     {
-//         ques: "Which is not a JavaScript Framework?", 
-//         options: ["Python Script", "JQuery","Django", "NodeJS"],
-//         ans: "Django"
-//     },
-//     {
-//         ques: "Which is used for Connect To Database?", 
-//         options: ["PHP", "HTML", "JS", "All"],
-//         ans: "PHP"
-//     },
-//     {
-//         ques: "avaScript is a", 
-//         options: ["Language", "Programming Language", "Development", "All"],
-//         ans: "Programming Language"
-//     }
-// ];
+const quesListJSON = 
+[
+    {
+        ques: "JavaScript supports", 
+        options: ["Functions", "XHTML", "CSS", "HTML"],
+        ans: "Functions"
+    },
+    {
+        ques: "Which language is used for styling web pages?", 
+        options: ["HTML", "JQuery", "CSS", "XML"],
+        ans: "CSS"
+    },
+    {
+        ques: "Which is not a JavaScript Framework?", 
+        options: ["Python Script", "JQuery","Django", "NodeJS"],
+        ans: "Django"
+    },
+    {
+        ques: "Which is used for Connect To Database?", 
+        options: ["PHP", "HTML", "JS", "All"],
+        ans: "PHP"
+    },
+    {
+        ques: "avaScript is a", 
+        options: ["Language", "Programming Language", "Development", "All"],
+        ans: "Programming Language"
+    }
+];
 
 function Question(questionObj) {
     this.question = questionObj.ques;
@@ -90,9 +88,6 @@ function displayQuestion(question) {
     ques.innerText = question.question;
     for(let i = 0; i < question.options.length; i++) {
         choiceButtons[i].innerText = question.options[i];
-        // choiceButtons[i].onClick = function() {
-        //     quiz.checkOptionWithAnswer(choiceButtons[i].innerText);
-        //     loadQuestion()};
     }
 }
 
